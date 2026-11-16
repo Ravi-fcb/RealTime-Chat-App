@@ -1,0 +1,347 @@
+.chat-sidebar {
+  width: 270px;
+  background-color: #ffffff;
+  border-right: 1px solid #edf1f7;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  user-select: none;
+  position: relative;
+}
+
+/* User Profile Header */
+.sidebar-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 22px 20px 18px;
+  border-bottom: 1px solid #f8fafc;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  position: relative;
+}
+
+.sidebar-profile:hover {
+  background-color: #f8fafc;
+}
+
+.profile-avatar-container {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+}
+
+.profile-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #ea7a7a;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.5px;
+}
+
+.profile-online-badge {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 12px;
+  height: 12px;
+  background-color: #22c55e;
+  border: 2.5px solid #ffffff;
+  border-radius: 50%;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex: 1;
+}
+
+.profile-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1e293b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.profile-role {
+  font-size: 12px;
+  color: #94a3b8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.profile-dropdown-arrow {
+  font-size: 10px;
+  color: #94a3b8;
+}
+
+/* Identity Selector Popup */
+.identity-popup {
+  position: absolute;
+  top: 75px;
+  left: 14px;
+  right: 14px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e2e8f0;
+  padding: 8px;
+  z-index: 1100;
+}
+
+.identity-header {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #94a3b8;
+  padding: 6px 8px;
+  letter-spacing: 0.5px;
+}
+
+.identity-option {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.12s ease;
+}
+
+.identity-option:hover {
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
+
+.identity-option.active {
+  background-color: #eff6ff;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+/* Conversations Section Header */
+.conversations-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 20px 12px;
+}
+
+.conversations-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #64748b;
+  letter-spacing: -0.1px;
+}
+
+.add-conversation-btn {
+  background: transparent;
+  border: 1.5px solid #cbd5e1;
+  color: #94a3b8;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 3px;
+  transition: all 0.15s ease;
+}
+
+.add-conversation-btn:hover {
+  border-color: #64748b;
+  color: #334155;
+}
+
+.add-conversation-btn svg {
+  width: 12px;
+  height: 12px;
+}
+
+/* Channel Navigation */
+.channel-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 14px;
+  flex: 1;
+}
+
+.channel-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.15s ease;
+  width: 100%;
+}
+
+.channel-item:hover {
+  background-color: #f8fafc;
+}
+
+.channel-hash {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: #f1f5f9;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.channel-name {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #475569;
+}
+
+/* Selected Channel (Introductions) matching screenshot */
+.channel-item.active {
+  background-color: #4c8bf5;
+}
+
+.channel-item.active .channel-hash {
+  background-color: rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+}
+
+.channel-item.active .channel-name {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Sidebar Footer (Teammates Auto-Reply toggle) */
+.sidebar-footer {
+  padding: 16px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.footer-card {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.footer-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.footer-card-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.footer-card-desc {
+  font-size: 11px;
+  color: #64748b;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Switch styling */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 32px;
+  height: 18px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #cbd5e1;
+  transition: .2s;
+  border-radius: 18px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: .2s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #3b82f6;
+}
+
+input:checked + .slider:before {
+  transform: translateX(14px);
+}
+
+.channel-item-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.channel-team-snippet {
+  font-size: 11px;
+  color: #94a3b8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.channel-item.active .channel-team-snippet {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.identity-divider {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #94a3b8;
+  padding: 8px 8px 4px;
+  letter-spacing: 0.5px;
+  border-top: 1px solid #f1f5f9;
+  margin-top: 4px;
+}

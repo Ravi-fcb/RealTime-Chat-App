@@ -1,0 +1,144 @@
+.chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e9edf3;
+  user-select: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+  gap: 12px;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.channel-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e293b;
+  letter-spacing: -0.2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.channel-subtitle {
+  margin: 0;
+  font-size: 13px;
+  color: #94a3b8;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+/* Share & 2nd Window button group */
+.share-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.invite-btn,
+.multiwindow-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.invite-btn svg,
+.multiwindow-btn svg {
+  width: 13px;
+  height: 13px;
+}
+
+.invite-btn:hover,
+.multiwindow-btn:hover {
+  background-color: #eff6ff;
+  border-color: #93c5fd;
+  color: #2563eb;
+}
+
+.connection-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.connection-badge.online {
+  background-color: #ecfdf5;
+  color: #059669;
+}
+
+.connection-badge.offline {
+  background-color: #f1f5f9;
+  color: #64748b;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.connection-badge.online .status-dot {
+  background-color: #10b981;
+  box-shadow: 0 0 6px rgba(16, 185, 129, 0.6);
+}
+
+.connection-badge.offline .status-dot {
+  background-color: #94a3b8;
+}
+
+.member-count-container {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #94a3b8;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.member-numbers {
+  letter-spacing: 0.3px;
+}
+
+.users-icon {
+  width: 19px;
+  height: 19px;
+  stroke: #94a3b8;
+}
+
+@media (max-width: 640px) {
+  .share-btn-group {
+    display: none;
+  }
+}
