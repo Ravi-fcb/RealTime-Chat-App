@@ -2,8 +2,6 @@
 
 A modern single-page React team chat application matching the "Introductions" channel specification and UI reference. Built with **React 18**, **Vite**, **Socket.io**, and **Node.js/Express**.
 
-![Screenshot Reference](assets/20221208_203258_team-chat-intro.gif)
-
 ---
 
 ## ✨ Features & Requirements
